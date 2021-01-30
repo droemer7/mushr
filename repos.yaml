@@ -1,25 +1,56 @@
 repositories:
-  mushr_sim:
+  # MuSHR Software
+  sw/ros/master/src/mushr_sim:
     type: git
-    url: https://github.com/prl-mushr/mushr_sim.git
+    url: https://github.com/droemer7/mushr_sim.git
     version: master
-  mushr:
+  sw/ros/master/src/mushr:
     type: git
     url: https://github.com/prl-mushr/mushr.git
     version: master
-  mushr/mushr_base/mushr_base:
+  sw/ros/master/src/mushr/mushr_base/mushr_base:
     type: git
-    url: https://github.com/prl-mushr/mushr_base.git
+    url: https://github.com/droemer7/mushr_base.git
+    version: master   
+    
+  # ROS Software 
+  sw/ros/master/src/realsense2:
+    type: git
+    url: https://github.com/IntelRealSense/realsense-ros.git
+    version: b1c02bdf689c2e1b47c88fac098608c1e7964b91
+  sw/ros/master/src/robot_state_publisher:
+    type: git
+    url: https://github.com/droemer7/robot_state_publisher.git
+    version: noetic-devel   
+  sw/ros/master/src/serial:
+    type: git
+    url: https://github.com/wjwwood/serial.git
     version: master
-  mushr/mushr_base/vesc:
+  sw/ros/master/src/timed_roslaunch:
+    type: git
+    url: https://github.com/MoriKen254/timed_roslaunch.git
+    version: melodic-devel 
+    
+  # MuSHR Hardware
+  sw/ros/master/src/mushr/mushr_base/vesc:
     type: git
     url: https://github.com/prl-mushr/vesc.git
     version: master
-  mushr/mushr_hardware/realsense:
+  sw/ros/master/src/mushr/mushr_hardware/ydlidar:
     type: git
-    url: https://github.com/IntelRealSense/realsense-ros.git
-    version: 31fa75ec835650d319f2d5abd3f7d0ab66fd37f4
-  range_libc:
+    url: https://github.com/prl-mushr/ydlidar
+    version: master
+  sw/ros/master/src/mushr/mushr_hardware/push_button_utils:
     type: git
-    url: https://github.com/kctess5/range_libc.git
+    url: https://github.com/droemer7/push_button_utils
+    version: master
+    
+  # External Software
+  sw/lib/range_libc:
+    type: git
+    url: https://github.com/droemer7/range_libc.git
     version: deploy
+  sw/lib/librealsense:
+    type: git
+    url: https://github.com/IntelRealSense/librealsense.git
+    version: master
