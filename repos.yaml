@@ -6,7 +6,7 @@ repositories:
     version: master
   sw/ros/master/src/mushr:
     type: git
-    url: https://github.com/prl-mushr/mushr.git
+    url: https://github.com/droemer7/mushr.git
     version: master
   sw/ros/master/src/mushr/mushr_base/mushr_base:
     type: git
@@ -34,11 +34,11 @@ repositories:
   # MuSHR Hardware
   sw/ros/master/src/mushr/mushr_base/vesc:
     type: git
-    url: https://github.com/prl-mushr/vesc.git
+    url: https://github.com/droemer7/vesc.git
     version: master
   sw/ros/master/src/mushr/mushr_hardware/ydlidar:
     type: git
-    url: https://github.com/prl-mushr/ydlidar
+    url: https://github.com/droemer7/ydlidar
     version: master
   sw/ros/master/src/mushr/mushr_hardware/push_button_utils:
     type: git
