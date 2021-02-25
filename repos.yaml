@@ -1,5 +1,11 @@
 repositories:
-  # MuSHR Software
+  # Personal software
+  sw/ros/master/src/localize:
+    type: git
+    url: https://github.com/droemer7/localize.git
+    version: master
+    
+  # MuSHR software
   sw/ros/master/src/mushr_sim:
     type: git
     url: https://github.com/droemer7/mushr_sim.git
@@ -13,7 +19,7 @@ repositories:
     url: https://github.com/droemer7/mushr_base.git
     version: master   
     
-  # ROS Software 
+  # ROS software 
   sw/ros/master/src/realsense2:
     type: git
     url: https://github.com/IntelRealSense/realsense-ros.git
@@ -31,7 +37,7 @@ repositories:
     url: https://github.com/MoriKen254/timed_roslaunch.git
     version: melodic-devel 
     
-  # MuSHR Hardware
+  # MuSHR hardware
   sw/ros/master/src/mushr/mushr_base/vesc:
     type: git
     url: https://github.com/droemer7/vesc.git
@@ -45,7 +51,7 @@ repositories:
     url: https://github.com/droemer7/push_button_utils
     version: master
     
-  # External Software
+  # External software
   sw/lib/range_libc:
     type: git
     url: https://github.com/droemer7/range_libc.git
