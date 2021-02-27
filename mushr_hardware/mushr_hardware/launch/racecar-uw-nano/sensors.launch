@@ -1,8 +1,8 @@
 <!-- -*- mode: XML -*- -->
 <launch>
   <!-- Launch arguments -->
-  <arg name="car_name"/>
-  <arg name="racecar_version"/>
+  <arg name="car_name"        default="car"/>
+  <arg name="racecar_version" default="racecar-uw-nano"/>
 
   <!-- Config -->
   <rosparam file="$(find mushr_hardware)/config/$(arg racecar_version)/sensors.yaml" command="load"/>
