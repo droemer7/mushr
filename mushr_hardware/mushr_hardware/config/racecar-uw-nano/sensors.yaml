@@ -3,6 +3,7 @@ imu_node:
 
 camera:
   realsense2_camera_manager:
+    # Need to change these to 455 and test
     rs435_color_saturation: 50
     rs435_color_white_balance: 300
 

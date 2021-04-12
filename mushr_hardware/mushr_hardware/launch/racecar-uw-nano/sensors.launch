@@ -8,9 +8,11 @@
   <rosparam file="$(find mushr_hardware)/config/$(arg racecar_version)/sensors.yaml" command="load"/>
 
   <!-- Camera -->
+  <!--
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
       args="10 realsense2_camera rs_camera.launch camera:=/$(arg car_name)/camera tf_prefix:=/$(arg car_name)/camera"
       name="rs_camera_timed_roslaunch" output="screen"/>
+  -->
 
   <!-- Laser -->
   <include file="$(find ydlidar)/launch/lidar.launch">
@@ -18,5 +20,7 @@
   </include>
 
   <!-- Push Button -->
+  <!--
   <include file="$(find push_button_utils)/launch/push_button.launch"/>
+  -->
 </launch>
