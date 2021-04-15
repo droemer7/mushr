@@ -3,24 +3,29 @@
   <!-- Launch arguments -->
   <arg name="car_name"        default="car"/>
   <arg name="racecar_version" default="racecar-uw-nano"/>
+  <arg name="camera"          default="true"/>
+  <arg name="laser"           default="true"/>
+  <arg name="push_button"     default="true"/>
 
   <!-- Config -->
   <rosparam file="$(find mushr_hardware)/config/$(arg racecar_version)/sensors.yaml" command="load"/>
 
   <!-- Camera -->
-  <!--
-  <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
-      args="10 realsense2_camera rs_camera.launch camera:=/$(arg car_name)/camera tf_prefix:=/$(arg car_name)/camera"
-      name="rs_camera_timed_roslaunch" output="screen"/>
-  -->
+  <group if="$(arg camera)">
+    <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
+        args="10 realsense2_camera rs_camera.launch camera:=/$(arg car_name)/camera tf_prefix:=/$(arg car_name)/camera"
+        name="rs_camera_timed_roslaunch" output="screen"/>
+  </group>
 
   <!-- Laser -->
-  <include file="$(find ydlidar)/launch/lidar.launch">
-    <arg name="car_name" value="$(arg car_name)"/>
-  </include>
+  <group if="$(arg laser)">
+    <include file="$(find ydlidar)/launch/lidar.launch">
+      <arg name="car_name" value="$(arg car_name)"/>
+    </include>
+  </group>
 
   <!-- Push Button -->
-  <!--
-  <include file="$(find push_button_utils)/launch/push_button.launch"/>
-  -->
+  <group if="$(arg push_button)">
+    <include file="$(find push_button_utils)/launch/push_button.launch"/>
+  </group>
 </launch>
