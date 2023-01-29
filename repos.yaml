@@ -56,6 +56,10 @@ repositories:
     type: git
     url: https://github.com/droemer7/range_libc.git
     version: deploy
+  sw/ros/master/src/CppNumericalSolvers:
+    type: git
+    url: https://github.com/droemer7/CppNumericalSolvers.git
+    version: v2
   # sw/lib/librealsense:
     # type: git
     # url: https://github.com/IntelRealSense/librealsense.git
