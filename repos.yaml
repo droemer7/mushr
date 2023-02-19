@@ -1,65 +1,70 @@
 repositories:
-  # Personal software
+  # Personal - Localization
   sw/ros/master/src/localize:
     type: git
     url: https://github.com/droemer7/localize.git
     version: master
+  sw/ros/master/src/localize/range_libc:
+    type: git
+    url: https://github.com/droemer7/range_libc.git
+    version: deploy
+
+  # Personal - Motion
+  sw/ros/master/src/motion:
+    type: git
+    url: https://github.com/droemer7/motion.git
+    version: master
+  sw/ros/master/src/motion/cppoptlib:
+    type: git
+    url: https://github.com/droemer7/CppNumericalSolvers.git
+    version: v2
+
+  # Personal - Scripts
+  sw/ros/master/scripts:
+    type: git
+    url: https://github.com/droemer7/scripts.git
+    version: master
 
   # MuSHR software
-  sw/ros/master/src/mushr_sim:
-    type: git
-    url: https://github.com/droemer7/mushr_sim.git
-    version: master
-  sw/ros/master/src/mushr:
+  sw/ros/master/src/mushr/general:
     type: git
     url: https://github.com/droemer7/mushr.git
     version: master
-  sw/ros/master/src/mushr/mushr_base/mushr_base:
+  sw/ros/master/src/mushr/base:
     type: git
     url: https://github.com/droemer7/mushr_base.git
     version: master
-
-  # ROS software
-  sw/ros/master/src/realsense2:
+  sw/ros/master/src/mushr/sim:
     type: git
-    url: https://github.com/IntelRealSense/realsense-ros.git
-    version: b1c02bdf689c2e1b47c88fac098608c1e7964b91
-  sw/ros/master/src/robot_state_publisher:
-    type: git
-    url: https://github.com/droemer7/robot_state_publisher.git
-    version: noetic-devel
-  sw/ros/master/src/serial:
-    type: git
-    url: https://github.com/wjwwood/serial.git
+    url: https://github.com/droemer7/mushr_sim.git
     version: master
-  sw/ros/master/src/timed_roslaunch:
+  sw/ros/master/src/mushr/timed_roslaunch:
     type: git
     url: https://github.com/MoriKen254/timed_roslaunch.git
     version: melodic-devel
 
   # MuSHR hardware
-  sw/ros/master/src/mushr/mushr_base/vesc:
+  sw/ros/master/src/hardware/vesc:
     type: git
     url: https://github.com/droemer7/vesc.git
     version: master
-  sw/ros/master/src/mushr/mushr_hardware/ydlidar:
+  sw/ros/master/src/hardware/ydlidar:
     type: git
     url: https://github.com/droemer7/ydlidar
     version: master
-  sw/ros/master/src/mushr/mushr_hardware/push_button_utils:
+  sw/ros/master/src/hardware/push_button_utils:
     type: git
     url: https://github.com/droemer7/push_button_utils
     version: master
-
+  sw/ros/master/src/hardware/serial:
+    type: git
+    url: https://github.com/wjwwood/serial.git
+    version: master
+  sw/ros/master/src/hardware/realsense2:
+    type: git
+    url: https://github.com/IntelRealSense/realsense-ros.git
+    version: b1c02bdf689c2e1b47c88fac098608c1e7964b91
   # External software
-  sw/ros/master/src/range_libc:
-    type: git
-    url: https://github.com/droemer7/range_libc.git
-    version: deploy
-  sw/ros/master/src/CppNumericalSolvers:
-    type: git
-    url: https://github.com/droemer7/CppNumericalSolvers.git
-    version: v2
   # sw/lib/librealsense:
     # type: git
     # url: https://github.com/IntelRealSense/librealsense.git
